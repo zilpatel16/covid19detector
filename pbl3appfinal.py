@@ -92,7 +92,7 @@ def main():
 
 				# Pre-Trained CNN Model Importing
 				
-				model = tf.keras.models.load_model('C:\Users\zilpa\Downloads\vgg_chest')
+				model = tf.keras.models.load_model('vgg_chest.h5')
 
 				# Diagnosis (Prevision=Binary Classification)
 				diagnosis = model.predict_classes(X_Ray)
