@@ -95,7 +95,7 @@ def main():
 				model = tf.keras.models.load_model('vgg_chest.h5')
 
 				# Diagnosis (Prevision=Binary Classification)
-				diagnosis = model.predict_classes(X_Ray)
+				np.argmax(model.predict(X_Ray), axis=-1)
 				diagnosis_proba = model.predict(X_Ray)
 				probability_cov = diagnosis_proba*100
 				probability_no_cov = (1-diagnosis_proba)*100
