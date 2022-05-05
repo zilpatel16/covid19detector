@@ -120,9 +120,8 @@ def main():
 
 	if st.sidebar.button("About the Project"):
 		st.sidebar.subheader("Covid-19 Detection Tool")
-		st.sidebar.markdown("Submitted by Zil Patel(19070123140)
-				    		  Yash Mehta(19070123138)
-				                  Hrithik Singh")
+		st.sidebar.markdown("Submitted by Zil Patel(19070123140), Yash Mehta(19070123138), Hrithik Singh")
+				                  
 		
 		st.sidebar.text("PBL - 3 WebApp developped using Python and Streamlit")
 
