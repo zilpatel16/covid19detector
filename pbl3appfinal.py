@@ -17,7 +17,7 @@ import os
 import time
 
 # Viz Pkgs
-import cv2
+import cv2 as cv
 from PIL import Image,ImageEnhance
 import numpy as np 
 
@@ -77,15 +77,15 @@ def main():
 
 				# Image to Black and White
 				new_img = np.array(our_image.convert('RGB')) #our image is binary we have to convert it in array
-				new_img = cv2.cvtColor(new_img,1) # 0 is original, 1 is grayscale
-				gray = cv2.cvtColor(new_img,cv2.COLOR_BGR2GRAY)
+				new_img = cv.cvtColor(new_img,1) # 0 is original, 1 is grayscale
+				gray = cv.cvtColor(new_img,cv2.COLOR_BGR2GRAY)
 				st.text("Chest X-Ray")
 				st.image(gray,use_column_width=True)
 
 				# PX-Ray (Image) Preprocessing
 				IMG_SIZE = (200,200)
-				img = cv2.equalizeHist(gray)
-				img = cv2.resize(img,IMG_SIZE)
+				img = cv.equalizeHist(gray)
+				img = cv.resize(img,IMG_SIZE)
 				img = img/255. #Normalization
 
 				# Image reshaping according to Tensorflow format
