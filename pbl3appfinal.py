@@ -34,7 +34,7 @@ def main():
 
 	st.markdown(html_templ,unsafe_allow_html=True)
 	st.write("A simple proposal for Covid-19 Diagnosis powered by Deep Learning and Streamlit")
-	st.sidebar.image("/content/drive/MyDrive/pblphoto.png",width=300)
+	st.sidebar.image("C:\Users\zilpa\Desktop\pblphoto.png",width=300)
 
 	image_file = st.sidebar.file_uploader("Upload an X-Ray Image (jpg, png or jpeg)",type=['jpg','png','jpeg'])
 
